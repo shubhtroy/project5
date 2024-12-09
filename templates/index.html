@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DeepFace Web App</title>
+</head>
+<body>
+    <h1>DeepFace Web App</h1>
+    <form action="/match" method="POST" enctype="multipart/form-data">
+        <h2>1. Face Matching</h2>
+        <label>Select First Image:</label>
+        <input type="file" name="img1" required><br>
+        <label>Select Second Image:</label>
+        <input type="file" name="img2" required><br>
+        <button type="submit">Match Faces</button>
+    </form>
+    <hr>
+    <form action="/analyze" method="POST" enctype="multipart/form-data">
+        <h2>2. Face Analysis</h2>
+        <label>Select Image:</label>
+        <input type="file" name="img" required><br>
+        <button type="submit">Analyze Face</button>
+    </form>
+    <hr>
+    <form action="/find" method="POST" enctype="multipart/form-data">
+        <h2>3. Find Face in Database</h2>
+        <label>Select Image:</label>
+        <input type="file" name="img" required><br>
+        <label>Database Path:</label>
+        <input type="text" name="db_path" placeholder="Path to database folder" required><br>
+        <button type="submit">Find Face</button>
+    </form>
+</body>
+</html>
